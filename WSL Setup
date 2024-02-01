@@ -1,1 +1,22 @@
-kkljll
+A. Install WSL2 Windows platform
+	wsl --install -d Ubuntu-22.04
+	ubuntu2204.exe config --default-user root
+B. Intall Python3
+	sudo apt update
+	sudo apt -y upgrade
+	# Check version :
+		python3 -V
+	sudo apt install -y python3-pip
+	sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+
+C. Step 2 — Setting Up a Virtual Environment
+	sudo apt install -y python3-venv
+	mkdir environments
+	cd environments
+	python3 -m venv my_env
+
+D. CUDA Toolkit 12.3 Update
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-3
